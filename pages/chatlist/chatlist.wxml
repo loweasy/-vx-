@@ -1,0 +1,14 @@
+<view class='add'>
+<view class='addlist'>
+<navigator url='../../pages/addchat/addchat'>
+<image src='../../images/add.png'  class="img2" bindtap='add'/></navigator>
+<text class='listnews2'>   添加群聊</text>
+
+</view>
+</view>
+<view>
+  <view></view>
+  <block  wx:for="{{chatlist}}" wx:key>
+  <view class='chatlist'><navigator url='{{item.chatDetailUrl}}'><image class='img' src='data:image/png;base64,{{item.chatUrl}}'/></navigator><text class='listnews'>{{item.chatName}}</text></view>
+  </block>
+</view>

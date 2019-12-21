@@ -1,0 +1,74 @@
+<!--pages/index/index.wxml-->
+<!--弹出层-->
+<view class="serachEvent" wx:if="{{mask_background}}">
+       
+</view>
+
+<view class="my_search" wx:if="{{mask_search}}">
+            <view class="my_return" bindtap="retrunEvent">
+                      <text class="textReturn">返回</text>
+                      <!--<image class="imgCity" src="../../../images/arrow_down.png"></image>-->
+            </view>
+            <view class="search_item" bindtap="">
+                 <input type="text" class="my_input" focus="true" placeholder="搜索" bindinput="searchHandle"/> 
+                 <icon type="search"size="23" class="myIcon"></icon>
+            </view>
+            <view class="search" bindtap="messageEvent">
+                 <text class="search_cancel">{{newSearch}}</text>
+            </view>
+</view>   
+
+<view class="nav">
+      <view class="nav_item">
+            <view class="nav_city" bindtap="cityEvent">
+                      <text class="textCity">{{cityName}}</text>
+                      <image class="imgCity" src="../../images/arrow_down.png"></image>
+            </view>
+            <view class="nav_search" bindtap="searchEvent">
+                 <button class="searchBtn">
+                       <text class="textSearch"></text>
+                 </button> 
+                 <icon type="search"size="23" class="iconSearch"></icon>
+            </view>
+      </view>
+</view>
+
+
+<view class='huandeng'>
+<swiper indicator-dots="true" autoplay="true" interval="5000">
+  <block wx:for="{{imgUrls}}" wx:key="key">
+    <swiper-item>
+      <image src="{{item}}"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+
+<view class="news"><image style="width:10%;height:25px;" src='/images/msg.png'/><text style="text-align:left;text-indent: 20rpx;" >武大社区营业啦!!!</text></view>
+
+<view class="menu">
+
+<view class="item">
+
+<image style="width:10%;height:25px;" src='/images/car.png'/><navigator url='../market/market'><text style="text-align:left;text-indent:20rpx;">二手市场</text>
+</navigator>
+</view>
+
+
+<view class="item2">
+
+<image style='width:10%;height:25px;' src='/images/friend.png'/><navigator url='../chatlist/chatlist'><text style="text-align:left;text-indent:20rpx;">交友平台</text>
+</navigator>
+</view>
+
+
+<view class="item3">
+
+<image style='width:10%;height:25px;' src='/images/heart.png' /><navigator url='../wall/wall'><text style='text-align:left;text-indent:20rpx;'>表白墙</text>
+</navigator>
+</view>
+
+</view>
+
+
+

@@ -1,0 +1,55 @@
+<!--pages/index/index.wxml-->
+<!--弹出层-->
+<view class="serachEvent" wx:if="{{mask_background}}">
+
+</view>
+
+<view class="my_search" wx:if="{{mask_search}}">
+  <view class="my_return" bindtap="retrunEvent">
+    <text class="textReturn">返回</text>
+    <!--<image class="imgCity" src="../../../images/arrow_down.png"></image>-->
+  </view>
+  <view class="search_item" bindtap="">
+    <input type="text" class="my_input" focus="true" placeholder="搜索" bindinput="searchHandle" />
+    <icon type="search" size="23" class="myIcon"></icon>
+  </view>
+  <view class="search" bindtap="messageEvent">
+    <text class="search_cancel">{{newSearch}}</text>
+  </view>
+</view>
+
+<view class="nav">
+  <view class="nav_item">
+    <view class="nav_search" bindtap="searchEvent">
+      <button class="searchBtn">
+        <text class="textSearch"></text>
+      </button>
+      <icon type="search" size="23" class="iconSearch"></icon>
+    </view>
+  </view>
+</view>
+
+<view></view>
+<!--content-->
+<scroll-view scroll-y="true" style="height:{{scrollH}}px" bindscrolltolower="loadImages">
+  <view class="goods" style="width:100%">
+    <view class="mg_item">
+      <view wx:for="{{productList}}" wx:key="id">
+      <view class="item_info">
+        <navigator url='{{item.product}}'><image src="data:image/png;base64,{{item.productUrl}}" style="width:100%;height:{{item.height}}px"></image></navigator>
+      </view>
+            <view class="product-name">
+              {{item.productName}}
+            </view>
+            <view class="product-price-wrap">
+              <p class="product-price-new">￥{{item.productPrice}}</p>  
+             <!--<p class="product-price-old">￥{{item.oldprice}}</p> -->
+               <p class="discount">{{item.productDesc}}</p>   
+            </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+ <view style="display:none">
+  <image wx:for="{{images}}" wx:key="id" id="{{item.id}}" src="{{item.imageurl}}" bindload="onImageLoad"></image>
+</view> 

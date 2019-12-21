@@ -1,0 +1,1 @@
+<view><button bindtap='del'>清除聊天室</button></view>

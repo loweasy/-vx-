@@ -1,0 +1,50 @@
+<view>
+<form bindsubmit='productSubmit'>
+	<view class="container-body container-gray" style="display:{{showfootertab==0?'block':'none'}}">
+		<view class="group">
+			<view class="group-header">群聊头像</view>
+			<view class="group-body">
+				<view class="img-upload">
+					<view class="img-add" bindtap="chooseImage"></view>
+					<view class="img-item" bindlongtap="editImage" wx:for="{{uploadimgs}}" wx:key="{{index}}">
+						<icon type="clear" size="20" color="red" style="display:{{editable?'block':'none'}}" bindtap="deleteImg" data-index="{{index}}"/>
+						<image src="{{item}}" mode="aspectFill"></image>
+					</view>
+				</view>
+			</view>
+
+			<view class="group-header">群聊信息</view>
+			<view class="group-body">
+				<view class="input-list">
+					<view class="input-item">
+						<text class="input-item-label">群聊名称</text>
+						<view class="input-item-content">
+							<input type="text" placeholder="群聊名称" name="productname"></input>
+						</view>
+					</view>
+          <view class="input-item">
+						<text class="input-item-label">群聊人数</text>
+						<view class="input-item-content">
+							<input type="text" placeholder="请输入群聊人数" name="productnum"></input>
+						</view>
+					</view>
+          <view class="input-item input-item-full">
+					<text class="input-item-label">成员添加</text>
+					<checkbox-group bindchange="checkboxChange">
+  <view class="item" wx:for="{{list}}" wx:key>
+    <checkbox value="{{item.id}},{{item.name}}" checked="{{item.isChecked}}"></checkbox>
+    <text class="overflow">{{item.name}}</text>
+  </view>
+</checkbox-group>
+				</view>
+				</view>
+			</view>   
+		<view class="btn-submit">
+			<button class="btn-block btn-orange" form-type='submit' >确认提交</button>
+		</view>
+		</view>
+	</view>
+	<view class="footer-tab footer-tab-widthicon">
+	</view>
+  </form>
+</view>

@@ -1,0 +1,21 @@
+<view class="personal_info">
+	<view class="photo_wrap">
+  <!--  t  
+		<image src="{{userInfo.avatarUrl}}" class="photo"></image>-->
+    	<image src="../../images/heart.png" class="photo"></image>
+	</view>
+	<!--<view class="nickname">
+		{{userInfo.nickName}} 
+	</view> -->
+  <view class="nickname">
+		校园社区管理员
+	</view>
+</view>
+<view class="wode_item_wrap">
+	<view class="wode_item" wx:for="{{mode}}">
+  <navigator  url="{{item.pagePath}}">
+		{{item.text}}
+		<span class="arrow_wrap"></span>
+    </navigator>
+	</view>
+</view>

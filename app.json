@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/msg/msg",
+    "pages/chat/chat",
+    "pages/order/order",
+    "pages/shop/shop",
+    "pages/mine/mine",
+    "pages/logs/logs",
+    "pages/market/market",
+    "pages/wall/wall",
+    "pages/product/product",
+    "pages/clean/clean",
+    "pages/chatlist/chatlist",
+    "pages/putaway/putaway",
+    "pages/out/out",
+    "pages/collection/collection",
+    "pages/addchat/addchat",
+    "pages/shopmsg/shopmsg"
+  ],
+
+    "tabBar": {
+      "borderStyle": "white",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "首页",
+          "iconPath": "images/shouye.png",
+          "selectedIconPath": "images/shouye1.png"
+        },
+        {
+          "pagePath": "pages/mine/mine",
+          "text": "个人中心",
+          "iconPath": "images/wode.png",
+          "selectedIconPath": "images/wode1.png"
+        }
+      ]
+    },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
