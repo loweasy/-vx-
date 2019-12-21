@@ -7,13 +7,12 @@
 ![首页框架展示](https://github.com/loweasy/-vx-/blob/The-First-iteration/7DC88D05AF3725C896C12710151C30B9.jpg)
 ### 框架wsxx结构
 
-![框架wxss结构](https://github.com/loweasy/-vx-/blob/The-First-iteration/0150E82E625E886C26CF47DC7D171A2B.jpg)
-### 个人信息管理界面
 
-![个人信息管理](https://github.com/loweasy/-vx-/blob/The-First-iteration/62EC10B8BA0D0E630184215E9E682B8C.jpg)
 
 详情见[CSDN博客](https://blog.csdn.net/weixin_44588455)
 ## 第二轮迭代成果展示
+![框架wxss结构](https://github.com/loweasy/-vx-/blob/The-First-iteration/0150E82E625E886C26CF47DC7D171A2B.jpg)
+### 个人信息管理界面
   ### 新增聊天室创建
   
   ### 新建订单；
@@ -21,6 +20,7 @@
   ### 查看修改订单；
   
 ## 第三轮迭代成果展示
+![个人信息管理](https://github.com/loweasy/-vx-/blob/The-First-iteration/62EC10B8BA0D0E630184215E9E682B8C.jpg)
   ### 新增表白墙功能；
   ### 新增实时聊天对话功能；
 
